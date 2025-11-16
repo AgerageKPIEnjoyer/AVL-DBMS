@@ -267,7 +267,7 @@ namespace AVL_DBMS.ViewModel
                 return;
             }
 
-            // 3. Видалення
+            // Видалення
             try
             {
                 string filePath = Path.Combine(_databaseFolderPath, fileToDelete);
@@ -479,7 +479,7 @@ namespace AVL_DBMS.ViewModel
 
                 StatusMessage = $"Успішно згенеровано {count} записів.";
 
-                // 4. Сповіщуємо UI
+                // Сповіщуємо UI
                 OnPropertyChanged(nameof(CurrentTreeCount)); // Оновлюємо лічильник
                 TreeChanged?.Invoke(); // Запускаємо перемальовування (View вирішить, чи малювати)
             }

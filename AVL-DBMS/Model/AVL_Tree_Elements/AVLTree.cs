@@ -16,7 +16,7 @@
 
         public (bool Found, string Value, int Comparisons) Search(int key)
         {            
-            return SearchNode(_root, key, 1);
+            return SearchNode(_root, key, 0);
         }
 
         /// <summary>
@@ -217,9 +217,7 @@
             if (key == node.Key)
             {
                 return (true, node.Value, comparisons);
-            }
-
-            comparisons++;
+            }           
 
             // Випадок 3: Ключ менший, йдемо вліво
             if (key < node.Key)
