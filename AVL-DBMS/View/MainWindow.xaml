@@ -18,7 +18,7 @@
             <TextBlock Text="AVL Tree Database Manager" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold" FontSize="14"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Width="30" Content="🗕" Click="Minimize_Click"/>
-                <Button Width="30" Content="▢" IsEnabled="False"/>
+                <Button Width="30" Content="▢" Click="Maximize_Click"/>
                 <Button Width="30" Content="✕" Click="Exit_Click"/>
             </StackPanel>
         </DockPanel>
@@ -119,7 +119,6 @@
             </Border>
 
         </Grid>
-
         <Border Grid.Row="2" Background="#222" MinHeight="30">
             <Grid Margin="10,5">
                 <Grid.ColumnDefinitions>
@@ -143,6 +142,5 @@
                 </TextBlock>
             </Grid>                
         </Border>
-
     </Grid>
 </Window>

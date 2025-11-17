@@ -122,7 +122,7 @@ namespace AVL_DBMS.ViewModel
         public ICommand GenerateDataCommand { get; }
         public ICommand NewDatabaseCommand { get; }        
         public ICommand SaveDatabaseCommand { get; }
-        public ICommand DeleteDatabaseCommand { get; }
+        public ICommand DeleteDatabaseCommand { get; }       
 
         public event Action TreeChanged;      
 

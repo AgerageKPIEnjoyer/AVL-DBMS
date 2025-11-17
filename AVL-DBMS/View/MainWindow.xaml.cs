@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using AVL_DBMS.ViewModel;
 using AVL_DBMS.Model.AVL_Tree_Elements;
+using System.Diagnostics.Eventing.Reader;
 
 namespace AVL_DBMS
 {
@@ -243,6 +244,13 @@ namespace AVL_DBMS
             WindowState = WindowState.Minimized;
         }
 
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            bool isMaximized = WindowState == WindowState.Maximized;
+            WindowState = (isMaximized == true) ? WindowState.Normal : WindowState.Maximized;
+            isMaximized = !isMaximized;
+        }
+
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(
@@ -253,5 +261,7 @@ namespace AVL_DBMS
             if (result == MessageBoxResult.Yes)
                 Application.Current.Shutdown();
         }
+
+        
     }
 }
